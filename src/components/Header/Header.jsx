@@ -5,8 +5,8 @@ const Header = () => {
     return (
         <nav className="navigation">
             <ul>
-                <li><Link>Home</Link></li>
-                <li><Link>Create</Link></li>
+                <li><Link to="/" >Home</Link></li>
+                <li><Link to="/create" >Create</Link></li>
                 <li><Link>Movies</Link></li>
                 <li><Link>TV Shows</Link></li>
                 <li><Link>Dark/Light Mode</Link></li>

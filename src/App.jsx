@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
-import "./App.css";
 import Header from "./components/Header/Header";
+import CreatePage from "./components/CreatePage/CreatePage";
+import "./App.css";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/create" element={<CreatePage />} />
       </Routes>
     </>
   );
