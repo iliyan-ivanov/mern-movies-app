@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import Header from "./components/Header/Header";
 import CreatePage from "./components/CreatePage/CreatePage";
+import MovieDetailsPage from "./components/MovieDetailsPage/MovieDetailsPage";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
+        <Route path="/movie-details" element={<MovieDetailsPage />} />
       </Routes>
     </>
   );

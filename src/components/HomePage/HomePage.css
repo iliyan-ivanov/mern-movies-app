@@ -2,10 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 90%;
+    margin: auto;
 }
 
 .movie-card {
     width: 250px;
+    margin: 5px;
 }
 
 .movie-card img {

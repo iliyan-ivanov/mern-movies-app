@@ -1,9 +1,11 @@
 .navigation ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
-    margin: 0;
+    padding: 0;
+    margin: auto;
+    width: 80%;
 }
 
 .navigation li {
