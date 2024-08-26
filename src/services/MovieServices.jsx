@@ -3,7 +3,6 @@ const url = "https://movies-server-5id8.onrender.com/movies";
 export const getAllMovies = () => {
   return fetch(url)
     .then((res) => res.json())
-    .then((data) => setMovies(data))
     .catch((err) => {
       console.log(err);
       console.log("Failed to load movies");
@@ -13,7 +12,6 @@ export const getAllMovies = () => {
 export const getOneMovie = (id) => {
   return fetch(`${url}/${id}`)
     .then((res) => res.json())
-    .then((data) => setMovie(data))
     .catch((err) => {
       console.log(err);
       console.log("Failed to load movie");

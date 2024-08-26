@@ -1,0 +1,8 @@
+.movie-card {
+    width: 250px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 350px;
+}

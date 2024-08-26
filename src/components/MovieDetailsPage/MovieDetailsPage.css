@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-.movie-details-page-section {
+.movie-details-page-info {
     display: flex;
     justify-content: space-between;
 }
@@ -74,6 +74,10 @@
     margin: 20px 0px;
 }
 
+.movie-description {
+    margin: 30px 0px;
+}
+
 @media all and (max-width: 1260px) {
     .movie-trailer iframe {
         width: 100%;
@@ -106,7 +110,7 @@
 }
 
 @media all and (max-width: 800px) {
-    .movie-details-page-section {
+    .movie-details-page-info {
         flex-direction: column;
         align-items: center;
     }
