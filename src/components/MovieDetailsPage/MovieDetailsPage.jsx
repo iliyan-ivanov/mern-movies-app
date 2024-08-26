@@ -15,8 +15,10 @@ const MovieDetailsPage = () => {
           <div className="movie-details-page-lists">
             <ul className="movie-info">
               <li className="movie-details-page-heading">Venom</li>
-              <li>Mr Director</li>
-              <li>2015</li>
+              <li>Director: Mr Director</li>
+              <li>Released: 2015</li>
+              <li>Category: Fantasy</li>
+              <li>Type: Movie</li>
             </ul>
             <ul className="movie-details-page-btns">
               <li>
@@ -27,21 +29,23 @@ const MovieDetailsPage = () => {
               </li>
             </ul>
           </div>
-          <p>
-            Some Venom description Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nisi modi provident eligendi repellendus quos odit
-            adipisci quae consequatur itaque id et, cupiditate, laborum iusto
-            corporis. Officiis dolorem delectus et debitis.
-          </p>
           <div className="movie-trailer">
             <iframe
-              
               width="540"
               height="300"
+              allowFullScreen="true"
               src="https://www.youtube.com/embed/u9Mv98Gr5pY"
             ></iframe>
           </div>
         </article>
+      </section>
+      <section>
+        <p>
+          Some Venom description Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nisi modi provident eligendi repellendus quos odit
+          adipisci quae consequatur itaque id et, cupiditate, laborum iusto
+          corporis. Officiis dolorem delectus et debitis.
+        </p>
       </section>
     </main>
   );
