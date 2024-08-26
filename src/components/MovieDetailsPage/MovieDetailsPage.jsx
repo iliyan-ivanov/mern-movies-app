@@ -19,10 +19,12 @@ const MovieDetailsPage = () => {
               <li>2015</li>
             </ul>
             <ul className="movie-details-page-btns">
-              <li><Link>Edit</Link></li>
-              <li><Link>Delete</Link></li>
-              <li><Link>Like</Link></li>
-              <li><Link>Unlike</Link></li>
+              <li>
+                <Link>Edit</Link>
+              </li>
+              <li>
+                <Link>Delete</Link>
+              </li>
             </ul>
           </div>
           <p>
@@ -31,12 +33,14 @@ const MovieDetailsPage = () => {
             adipisci quae consequatur itaque id et, cupiditate, laborum iusto
             corporis. Officiis dolorem delectus et debitis.
           </p>
-          <iframe
-            className="movie-trailer"
-            width="620"
-            height="315"
-            src="https://www.youtube.com/watch?v=u9Mv98Gr5pY"
-          ></iframe>
+          <div className="movie-trailer">
+            <iframe
+              
+              width="540"
+              height="300"
+              src="https://www.youtube.com/embed/u9Mv98Gr5pY"
+            ></iframe>
+          </div>
         </article>
       </section>
     </main>

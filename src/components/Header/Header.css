@@ -1,3 +1,11 @@
+.navigation-light {
+    background: white;
+}
+
+.navigation-dark {
+    background: black;
+}
+
 .navigation ul{
     display: flex;
     justify-content: space-between;
@@ -8,12 +16,17 @@
     width: 80%;
 }
 
-.navigation li {
-    list-style: none;
-}
-
 .navigation a {
     text-decoration: none;
     font-size: 20px;
     color: black;
+}
+
+.navigation-dark li {
+    color: yellow;
+    font-size: 20px;
+}
+
+.navigation-dark a {
+    color: white;
 }
