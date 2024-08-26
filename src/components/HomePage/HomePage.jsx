@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 import "./HomePage.css";
 
 const HomePage = () => {
+    const { theme } = useContext(ThemeContext);
   return (
-    <main className="movies">
+    <main className={theme == "light" ? "movies-light movies" : "movies-dark movies"}>
       <div className="movie-card">
         <img
           src="https://i.ebayimg.com/images/g/ZKcAAOSwQXlcGzDu/s-l1200.jpg"
