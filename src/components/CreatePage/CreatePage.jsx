@@ -1,14 +1,26 @@
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import { createMovie } from "../../services/MovieServices";
+import { ThemeContext } from "../../contexts/ThemeContext";
 import "./CreatePage.css";
 
 const CreatePage = () => {
   const navigate = useNavigate();
+  const { theme } = useContext(ThemeContext);
 
   const onCreateMovie = (e) => {
     e.preventDefault();
 
-    const [title, director, premiereYear, description, imageUrl, videoUrl] = e.target;
+    const [
+      title,
+      director,
+      premiereYear,
+      description,
+      imageUrl,
+      videoUrl,
+      type,
+      category,
+    ] = e.target;
 
     const movie = {
       title: title.value,
@@ -16,16 +28,24 @@ const CreatePage = () => {
       premiereYear: premiereYear.value,
       description: description.value,
       imageUrl: imageUrl.value,
-      videoUrl: videoUrl.value.replace("watch?v=", "embed/")
+      videoUrl: videoUrl.value.replace("watch?v=", "embed/"),
+      type: type.value,
+      category: category.value,
     };
 
-    createMovie(movie)
-      .then(() => navigate("/"))
+    createMovie(movie).then(() => navigate("/"));
   };
-  
+
   return (
     <main className="create-page">
-      <form className="content-form" onSubmit={onCreateMovie}>
+      <form
+        className="content-form"
+        onSubmit={onCreateMovie}
+        style={{
+          background: theme === "light" ? "white" : "black",
+          color: theme === "light" ? "black" : "white",
+        }}
+      >
         <h2>Create Movie</h2>
 
         <label htmlFor="title">Title</label>
@@ -45,6 +65,12 @@ const CreatePage = () => {
 
         <label htmlFor="videoUrl">Video url</label>
         <input type="text" name="videoUrl" />
+
+        <label htmlFor="category">Category</label>
+        <input type="text" name="category" />
+
+        <label htmlFor="type">Type</label>
+        <input type="text" name="type" />
 
         <button type="submit" className="create-btn">
           Create
