@@ -2,16 +2,18 @@ import { useContext, useEffect, useState } from "react";
 import { getAllMovies } from "../../services/MovieServices";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import MovieCard from "../MovieCard/MovieCard";
-import "./HomePage.css";
+import { useParams } from "react-router-dom";
 
-const HomePage = () => {
+const Categories = () => {
   const [ movies, setMovies ] = useState();
   const { theme } = useContext(ThemeContext);
+  const { type } = useParams();
 
   useEffect(() => {
-    getAllMovies()
+    getAllMovies(type)
       .then(data => setMovies(data))
-  }, [])
+  }, [type]);
+  
   return (
     <main
       className={
@@ -28,4 +30,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Categories;

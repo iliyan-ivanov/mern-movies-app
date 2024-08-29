@@ -12,8 +12,8 @@ const Header = () => {
             <ul>
                 <li><Link to="/" >Home</Link></li>
                 <li><Link to="/create" >Create</Link></li>
-                <li><Link to="/movie-details">Movies</Link></li>
-                <li><Link>TV Shows</Link></li>
+                <li><Link to="/types/movies">Movies</Link></li>
+                <li><Link to="/types/tv-series">TV Series</Link></li>
                 <li onClick={toggleTheme}>{theme == "light" ? <FaIcons.FaMoon /> : <FaIcons.FaSun />}</li>
             </ul>
         </nav>
