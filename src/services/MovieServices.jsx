@@ -1,13 +1,32 @@
 const url = "https://movies-server-5id8.onrender.com/movies";
 
-export const getAllMovies = () => {
-  return fetch(url)
-    .then((res) => res.json())
-    .catch((err) => {
-      console.log(err);
-      console.log("Failed to load movies");
-    });
-};
+// export const getAllMovies = () => {
+//   return fetch(url)
+//     .then((res) => res.json())
+//     .catch((err) => {
+//       console.log(err);
+//       console.log("Failed to load movies");
+//     });
+// };
+
+export async function getAllMovies(movieType) {
+  const res = await fetch(url);
+
+  let data = await res.json();
+
+  if (movieType) {
+    if(movieType == "tv-series") {
+      movieType = "TV Series"
+    } else if (movieType == "movies") {
+      movieType = "Movie"
+    }
+
+    let movies = data.filter((x) => x.type == movieType).reverse();
+    return movies;
+  }
+
+  return data
+}
 
 export const getOneMovie = (id) => {
   return fetch(`${url}/${id}`)
