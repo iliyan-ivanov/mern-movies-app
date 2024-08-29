@@ -4,7 +4,7 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import MovieCard from "../MovieCard/MovieCard";
 import { useParams } from "react-router-dom";
 
-const Categories = () => {
+const TypesPage = () => {
   const [ movies, setMovies ] = useState();
   const { theme } = useContext(ThemeContext);
   const { type } = useParams();
@@ -30,4 +30,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default TypesPage;
