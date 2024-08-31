@@ -18,8 +18,8 @@ const CreatePage = () => {
       description,
       imageUrl,
       videoUrl,
-      type,
       category,
+      type,
     ] = e.target;
 
     const movie = {
@@ -29,8 +29,8 @@ const CreatePage = () => {
       description: description.value,
       imageUrl: imageUrl.value,
       videoUrl: videoUrl.value.replace("watch?v=", "embed/"),
-      type: type.value,
       category: category.value,
+      type: type.value,
     };
 
     createMovie(movie).then(() => navigate("/"));

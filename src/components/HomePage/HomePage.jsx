@@ -22,7 +22,7 @@ const HomePage = () => {
        ? movies?.map((x) => (
         <MovieCard img={x.imageUrl} key={x._id} id={x._id} />
       ))
-       : <div>Loading movies ...</div>
+       : <div style={{color: theme === "light" ? "black" : "white"}}>Loading movies ...</div>
        }
     </main>
   );
