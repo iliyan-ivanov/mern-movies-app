@@ -6,7 +6,7 @@ import "./index.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter >
+    <BrowserRouter basename="/mern-movies-app/">
       <App />
     </BrowserRouter>
   </StrictMode>
