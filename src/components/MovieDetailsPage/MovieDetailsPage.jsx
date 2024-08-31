@@ -1,17 +1,24 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { getOneMovie } from "../../services/MovieServices";
+import { deleteMovie, getOneMovie } from "../../services/MovieServices";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import "./MovieDetailsPage.css";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState();
+  const navigate = useNavigate();
   const { id } = useParams();
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     getOneMovie(id).then((data) => setMovie(data));
   }, []);
+
+
+  const onDeleteMovie = () => {
+    deleteMovie(id)
+      .then(() => navigate("/"));
+  }
 
   return (
     <main
@@ -36,9 +43,9 @@ const MovieDetailsPage = () => {
             </ul>
             <ul className="movie-details-page-btns">
               <li>
-                <Link>Edit</Link>
+                <Link to={`/movies/${id}/edit`}>Edit</Link>
               </li>
-              <li>
+              <li onClick={onDeleteMovie}>
                 <Link>Delete</Link>
               </li>
             </ul>

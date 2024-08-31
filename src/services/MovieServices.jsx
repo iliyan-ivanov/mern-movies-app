@@ -1,14 +1,5 @@
 const url = "https://movies-server-5id8.onrender.com/movies";
 
-// export const getAllMovies = () => {
-//   return fetch(url)
-//     .then((res) => res.json())
-//     .catch((err) => {
-//       console.log(err);
-//       console.log("Failed to load movies");
-//     });
-// };
-
 export async function getAllMovies(movieType) {
   const res = await fetch(url);
 
@@ -25,7 +16,7 @@ export async function getAllMovies(movieType) {
     return movies;
   }
 
-  return data
+  return data.reverse();
 }
 
 export const getOneMovie = (id) => {
@@ -57,6 +48,15 @@ export const editMovie = (id, movie) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(movie),
+  }).catch((err) => {
+    console.log(err);
+    console.log("Can't edit the movie");
+  });
+};
+
+export const deleteMovie = (id) => {
+  return fetch(`https://movies-server-5id8.onrender.com/movies/${id}`, {
+    method: "DELETE"
   }).catch((err) => {
     console.log(err);
     console.log("Can't edit the movie");
