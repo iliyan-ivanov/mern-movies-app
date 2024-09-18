@@ -1,8 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is client side (Frontend) portion of my full stack MERN app with CRUD operations. For my client side (Frontend) I used React and I deployed it on Github pages. For my server side (Backend) I used Node JS, Mongo DB, Mongoose and Express and I depoyed my server on Render (https://render.com/). Since I am using the free version of RENDER, here is a chance of slow requests due to inactivity (50 seconds or more, so please wait for your first request).
