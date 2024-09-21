@@ -91,7 +91,7 @@ const CreatePage = () => {
           value={formik.values.director}
         />
         {formik.touched.director && formik.errors.director ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.director}</p>
         ) : null}
 
         <label htmlFor="premiereYear">Premiere year</label>
@@ -103,7 +103,7 @@ const CreatePage = () => {
           value={formik.values.premiereYear}
         />
         {formik.touched.premiereYear && formik.errors.premiereYear ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.premiereYear}</p>
         ) : null}
 
         <label htmlFor="description">Description</label>
@@ -115,7 +115,7 @@ const CreatePage = () => {
           value={formik.values.description}
         />
         {formik.touched.description && formik.errors.description ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.description}</p>
         ) : null}
 
         <label htmlFor="imageUrl">Image url</label>
@@ -127,7 +127,7 @@ const CreatePage = () => {
           value={formik.values.imageUrl}
         />
         {formik.touched.imageUrl && formik.errors.imageUrl ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.imageUrl}</p>
         ) : null}
 
         <label htmlFor="videoUrl">Video url</label>
@@ -139,7 +139,7 @@ const CreatePage = () => {
           value={formik.values.videoUrl}
         />
         {formik.touched.videoUrl && formik.errors.videoUrl ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.videoUrl}</p>
         ) : null}
 
         <label htmlFor="category">Category</label>
@@ -151,7 +151,7 @@ const CreatePage = () => {
           value={formik.values.category}
         />
         {formik.touched.category && formik.errors.category ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.category}</p>
         ) : null}
 
         <label htmlFor="type">Type</label>
@@ -163,7 +163,7 @@ const CreatePage = () => {
           value={formik.values.type}
         />
         {formik.touched.type && formik.errors.type ? (
-          <p className="create-page-error">{formik.errors.title}</p>
+          <p className="create-page-error">{formik.errors.type}</p>
         ) : null}
 
         <button type="submit" className="create-btn">
